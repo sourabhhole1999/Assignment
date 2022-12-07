@@ -1,0 +1,21 @@
+<h1 class="text-center mt-3"> Details </h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+        </tr>
+    </thead>
+    {{#each info}}
+    <tbody>
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.city}}</td>
+        </tr>
+    </tbody>
+    {{/each}}
+</table>
