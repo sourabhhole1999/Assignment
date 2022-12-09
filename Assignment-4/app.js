@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended:false}));
 // db connection
-const connectionString="mongodb+srv://sourabh:Sourabh@615919@cluster0.tjtir16.mongodb.net/test";
+const connectionString="mongodb+srv://Sourabh:Sourabh@cluster0.tjtir16.mongodb.net/test";
 mongoose
   .connect(connectionString)
   .then(res=> console.log("Database connected"))
