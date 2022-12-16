@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+  <style>
+    body{
+      background-image:url('https://static.vecteezy.com/system/resources/thumbnails/004/569/363/small_2x/abstract-blue-papercut-background-free-vector.jpg') ;
+
+      background-size: cover;
+
+    }
+  </style>
+  
+</head>
+<%- include('./partials/header.ejs');%>
+
+<body>
+  <div class="container" >
+    <div class="row">
+        <% for(let i=0;i<data.length; i++){%>
+        <div class="col-md-3">
+          <div class="card text-center" style="width: 20rem;">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1R945WJ8P9hrDKd9WcXf0wmYbj4LodxpiwQ&usqp=CAU"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%=data[i].name%></h5>
+              <p class="card-text"><%=data[i].price%></p>
+              <p class="card-text"><%=data[i].quantity%></p>
+              <p class="card-text"><%=data[i].description%></p>
+              <div class="btn-group">
+                <a href="editproduct/<%=data[i]._id%>" class="btn btn-success">edit</a>&nbsp;&nbsp;&nbsp;
+                <a href="deleteproduct/<%=data[i]._id%>" class="btn btn-danger">delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%}%>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
